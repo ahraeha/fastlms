@@ -1,10 +1,7 @@
 package com.zerobase.fastlms.member.controller;
 
-import com.zerobase.fastlms.member.entity.Member;
 import com.zerobase.fastlms.member.model.MemberInput;
-import com.zerobase.fastlms.member.repository.MemberRepository;
 import com.zerobase.fastlms.member.service.MemberService;
-import java.time.LocalDateTime;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
@@ -33,5 +30,18 @@ public class MemberController {
     model.addAttribute("result", result);
 
     return "member/register_complete";
+  }
+
+  @GetMapping("/member/email-auth")
+  public String emailAuth(Model model, HttpServletRequest request) {
+
+    String uuid = request.getParameter("id");
+    System.out.println(uuid);
+
+    boolean result = memberService.emailAuth(uuid);
+    model.addAttribute("result", result);
+
+
+    return "member/email_auth";
   }
 }
