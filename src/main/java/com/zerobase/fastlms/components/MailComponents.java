@@ -1,4 +1,4 @@
-package com.zerobase.fastlms.member.components;
+package com.zerobase.fastlms.components;
 
 import javax.mail.internet.MimeMessage;
 import lombok.RequiredArgsConstructor;

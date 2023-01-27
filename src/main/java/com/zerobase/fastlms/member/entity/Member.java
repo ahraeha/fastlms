@@ -22,7 +22,11 @@ public class Member {
   private String phone;
   private String password;
   private LocalDateTime regDt;
+
   private boolean emailAuthYn;
   private LocalDateTime emailAuthDt;
   private String emailAuthKey;
+
+  private String resetPasswordKey;
+  private LocalDateTime resetPasswordLimitDt;
 }
