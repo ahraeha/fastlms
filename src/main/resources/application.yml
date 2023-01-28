@@ -1,9 +1,9 @@
 spring:
   datasource:
-    url: jdbc:mariadb://192.168.45.188:43306/minicampus?characterEncoding=UTF-8
+    url: 
     driver-class-name: org.mariadb.jdbc.Driver
-    username: minicampus_user
-    password: a1234
+    username: 
+    password: 
   jpa:
     generate-ddl: true
     hibernate:
